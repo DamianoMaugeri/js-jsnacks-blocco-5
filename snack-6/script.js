@@ -24,11 +24,67 @@ console.log(zs)
 let zul = [];
 let zus = [];
 zucchine.forEach(el => {
-  if (el.length >= 15) {
-    zul.push(el)
-    return
-  }
-  zus.push(el)
-
+  ((el.length >= 15) ? zul : zus).push(el);
 });
 console.log(zul, zus)
+
+
+
+function dividiz(array) {
+
+  return array.reduce((acc, current, index, array) => {
+    if (current.length >= 15) {
+      acc.zucl.push(current);
+
+    } else {
+      acc.zucc.push(current)
+    }
+    return acc
+
+  }, { zucl: [], zucc: [] })
+
+
+}
+
+
+
+function dividiz3(array) {
+
+  return array.reduce((acc, current, index, array) => {
+    ((current.length >= 15) ? acc.zcul : acc.zucc).push(current)
+
+    return acc
+
+  }, { zucl: [], zucc: [] })
+
+}
+
+function dividiz2(array) {
+
+  return array.reduce((acc, current, index, array) => {
+    ((current.length >= 15) ? acc.zucl : acc.zucc).push(current)
+
+    return acc
+
+  }, { zucl: [], zucc: [] })
+
+}
+
+
+console.log(dividiz(zucchine))
+console.log(dividiz2(zucchine))
+
+
+//console.log(dividiz3(zucchine))
+
+
+function dividiz4(array) {
+
+  return array.reduce((acc, current, index, array) => {
+    ((current.length >= 15) ? acc.zucl : acc.zucc).push(current)
+
+    return acc
+
+  }, { zucl: [], zucc: [] })
+
+} console.log(dividiz4(zucchine))
